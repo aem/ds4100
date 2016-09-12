@@ -85,8 +85,8 @@ df[which(df[,2] > 275),]         #     x   y
                                  # 39 39 290
                                  # 40 40 295
                                  # 41 41 300
-summary(df[,2])                  #    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-                                 #    100     150     200     200     250     300 
+summary(df[,2])                  # Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+                                 # 100     150     200     200     250     300
 colSums(df[2])                   # 8200
 
 aq <- head(airquality)
@@ -94,3 +94,12 @@ mean(aq$Solar.R)                 # [1] NA
 any(is.na(aq))                   # [1] TRUE
 mean(aq$Solar.R,na.rm=TRUE)      # [1] 192.5
 which(is.na(aq))                 # [1] 5 11 12
+
+
+getwd()                          # [1] "/Users/Adam/git/ds4100/class_09_12_16"
+setwd("~")
+getwd()                          # [1] "/Users/Adam"
+setwd("/Users/Adam/git/ds4100/class_09_12_16")
+
+# read.table("AirPassengers.txt", skip=4, nrows=3) 
+# read file AirPassengers in current directory skipping the first 4 rows, only reading in 3 rows total
