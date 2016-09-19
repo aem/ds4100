@@ -42,9 +42,3 @@ AvgDelay <- function(carrier, dest) {
   loadDataIfNeeded()
   return(round(mean(delays[which(delays[,3] == carrier & delays[,5] == dest),7], na.rm=TRUE), digits=2))
 }
-
-TotalNumDelays("DL")  # 31019
-
-TotalDelaysByOrigin("JFK")  # 4612
-
-AvgDelay("AA", "JFK") # 5.96
