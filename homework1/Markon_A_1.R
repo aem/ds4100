@@ -42,3 +42,8 @@ AvgDelay <- function(carrier, dest) {
   loadDataIfNeeded()
   return(round(mean(delays[which(delays[,3] == carrier & delays[,5] == dest),7], na.rm=TRUE), digits=2))
 }
+
+# n = variance(z/alpha)^2
+# z-score[95%] = 1.96
+# variance = p(1-p)  default p = 0.5
+# n = 0.25(1.96/0.05)^2
